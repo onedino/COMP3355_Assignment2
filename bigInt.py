@@ -40,5 +40,6 @@ def isPrime(num):
 
 #change the value here to check if it is a prime number
 print(isPrime(bigint))
+#print(isPrime(str(5555555555555555533)))
 #5555555555555555533 is the largest prime number that my PC can find within 10 minutes
 #3874204890000000001)))

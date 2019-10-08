@@ -3,8 +3,8 @@
 import time
 import math
 
-bigint = "5555555555555555533"
-
+#bigint = "71755440315342536873"
+bigint = "60884036363636410669"
 start = time.time()
 
 def isPrime(num):
@@ -20,14 +20,16 @@ def isPrime(num):
   if tmp % 2 == 0:
     return False
   else:
-    for i in range(3, int(math.sqrt(tmp)), 2):
+    for j in range(6, int(math.sqrt(tmp)), 6):
+      i = j - 1
+      k = j + 1
 #      print(i)
       sec = time.time() - start
-      if (tmp % i) == 0:
-        print (i)
+      if ((tmp % i) or (tmp % k)) == 0:
+        print (j)  #show the number of loops it computes
         return False
-      if (sec) >= 660:
-#        print(i)
+      if (sec) >= 600:
+        print(i)
         print("run out of time")
         break
     else:
@@ -41,5 +43,4 @@ def isPrime(num):
 #change the value here to check if it is a prime number
 print(isPrime(bigint))
 #print(isPrime(str(5555555555555555533)))
-#5555555555555555533 is the largest prime number that my PC can find within 10 minutes
-#3874204890000000001)))
+#60884036363636410669 is the largest prime number that my PC can find within 10 minutes
